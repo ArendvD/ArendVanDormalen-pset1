@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+Problem Set 1 for Native App Studio
+By Arend van Dormalen, 10615199 (UvA)
+-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -21,6 +25,21 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
+    <!--
+    First column of checkboxes. Checkboxes are chained from the bottom up.
+    Arms is set as master and is aligned to the body.
+    -->
+        <CheckBox
+            android:text="Arms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkArms"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="97dp"
+            android:layout_marginStart="97dp"
+            android:onClick="displayImage"/>
 
         <CheckBox
             android:text="Ears"
@@ -62,8 +81,20 @@
             android:layout_alignStart="@+id/checkArms"
             android:onClick="displayImage" />
         <!--
-        Second vertical row of checkboxes. Vertically linked to Hat box.
+        Second column of checkboxes. Vertically linked to Hat box.
+        The height of each checkbox is linked to its left neighbour.
+        Distance from left row is set to the checkbox with the longest text.
         -->
+
+        <CheckBox
+            android:text="Hat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkHat"
+            android:layout_toRightOf="@+id/checkEyebrows"
+            android:layout_toEndOf="@+id/checkEyebrows"
+            android:layout_alignTop="@+id/checkArms"
+            android:onClick="displayImage"/>
 
         <CheckBox
             android:text="Mouth"
@@ -109,27 +140,6 @@
             android:layout_alignTop="@+id/checkGlasses"
             android:onClick="displayImage"/>
 
-        <CheckBox
-            android:text="Hat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkHat"
-            android:layout_toRightOf="@+id/checkEyebrows"
-            android:layout_toEndOf="@+id/checkEyebrows"
-            android:layout_alignTop="@+id/checkArms"
-            android:onClick="displayImage"/>
-
-        <CheckBox
-            android:text="Arms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkArms"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="97dp"
-            android:layout_marginStart="97dp"
-            android:onClick="displayImage"/>
 
         <FrameLayout
             android:layout_width="match_parent"

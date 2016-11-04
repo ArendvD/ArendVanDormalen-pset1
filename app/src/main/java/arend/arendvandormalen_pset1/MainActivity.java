@@ -1,3 +1,5 @@
+// Problem Set 1, Native App Studio, Arend van Dormalen, 10615199 (UvA)
+
 package arend.arendvandormalen_pset1;
 
 import android.support.v7.app.AppCompatActivity;
@@ -8,12 +10,14 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    // On Launch
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
+    // Switch case for displaying correct images on checking of checkboxes
     public void displayImage(View view) {
 
         boolean checked = ((CheckBox) view).isChecked();

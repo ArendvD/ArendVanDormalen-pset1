@@ -140,7 +140,10 @@ By Arend van Dormalen, 10615199 (UvA)
             android:layout_alignTop="@+id/checkGlasses"
             android:onClick="displayImage"/>
 
-
+        <!--
+        Frame for displaying the images. All images except for the body
+        are set invisible on launch.
+        -->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
